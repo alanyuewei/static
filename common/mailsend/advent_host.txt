@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[-TITLE-]</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="keywords" content="岳小威子的博客,我就试试看,wjssk.com,tools.wjssk.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alanyuewei/static@v1.0/layui-2.6.8/css/layui.css"/>
+    <style>
+        body,
+        .layui-table thead tr th {
+            text-align: center !important;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .font-red {
+            color: #FF5722;
+        }
+    </style>
+</head>
+<body>
+<div><h2>嘿！有几台云虚拟主机要到期了</h2></div>
+<div class="layui-row content">
+    <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>主机服务商</th>
+                <th>主机信息</th>
+                <th>剩余天数</th>
+            </tr>
+            </thead>
+            [-ADVENTHOST-]
+        </table>
+    </div>
+</div>
+</body>
+</html>
