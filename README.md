@@ -19,3 +19,7 @@
 视频在线播放插件
 2021-08-21 13:45:28
 来源[DPlayer]('http://dplayer.js.org/')
+##Masonry
+Masonry是非常受欢迎的瀑布式排版插件
+2021-08-25 23:31:35
+来源[Masonry]('https://masonry.desandro.com/')
