@@ -1,3 +1,5 @@
+#使用方法
+`https://cdn.jsdelivr.net/gh/alanyuewei/static@latest/`
 # 仓库说明
 ##Layui
 开源模块化前端 UI 框架
