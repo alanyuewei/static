@@ -1,0 +1,133 @@
+<html>
+<head>
+  <title>页面跳转，马上就好...</title>
+  <meta http-equiv="refresh" content="4; url=[REPLACE]" />
+    <style>@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Roboto", sans-serif;
+        overflow: hidden;
+        box-shadow: inset 0 0 5em 1em #000;
+        background: #4f4f4f;
+    }
+
+    .lines::before {
+        content: "";
+        top: 50%;
+        transform: translatey(-50%);
+        left: 0;
+        height: 8px;
+        background: #000;
+        width: 100%;
+        position: absolute;
+    }
+
+    .lines::after {
+        content: "";
+        top: 0;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 8px;
+        background: #000;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .screen {
+        clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+        background: #e1e1e1;
+        position: absolute;
+        height: calc(100vh + 100vw);
+        width: calc(100vh + 100vw);
+        animation: spin 1s linear infinite;
+        box-shadow: inset 0 0 5em 1em #000;
+    }
+
+    @keyframes spin {
+        0% {
+            clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+        }
+        12% {
+            clip-path: polygon(50% 50%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+        }
+        37% {
+            clip-path: polygon(
+                    50% 50%,
+                    100% 100%,
+                    100% 100%,
+                    100% 100%,
+                    0 100%,
+                    0 0,
+                    50% 0
+            );
+        }
+        62% {
+            clip-path: polygon(50% 50%, 0 100%, 0 100%, 0 100%, 0 100%, 0 0, 50% 0);
+        }
+        87% {
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0, 50% 0);
+        }
+        100% {
+            clip-path: polygon(50% 50%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0);
+        }
+    }
+
+    .number {
+        font-size: 18rem;
+        position: relative;
+    }
+
+    .number::after,
+    .number::before {
+        content: "";
+        border: #f7f7f7 solid 12px;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .number::before {
+        width: 480px;
+        height: 480px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number::after {
+        width: 400px;
+        height: 400px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    </style>
+</head>
+<body style="">
+<div class="screen"></div>
+<div class="lines"></div>
+<div class="number"></div>
+<script>const number = document.querySelector(".number");
+const countdown = 3;
+let counter = countdown;
+number.innerHTML = counter;
+
+setInterval(() => {
+    counter--;
+    number.innerHTML = counter;
+    // if (counter === 1) {
+    //    window.location.href="[REPLACE]"
+    //}
+}, 1000);
+</script>
+</body>
+</html>
